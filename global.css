@@ -1,0 +1,22 @@
+ /* === Global Reset === */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ /* === Global Base Styles === */
+ body {
+     font-family: 'Segoe UI', sans-serif;
+     background-color: #f5f6fa;
+     /* light neutral background */
+     color: #222;
+     /* primary text color */
+     padding: 2rem;
+ }
+
+ h2 {
+     text-align: center;
+     margin-bottom: 2rem;
+     font-size: 2rem;
+ }
