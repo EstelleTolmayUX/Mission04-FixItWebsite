@@ -1,0 +1,153 @@
+/* === Navigation Styles === */
+.main-nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* === Layout Container === */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* only visible on mobile */
+}
+
+/* === Main Content === */
+.content {
+    padding: 2rem;
+}
+
+/* === Review Boxes === */
+.review-box {
+    background: #f5f2f5;
+    /*or subtle gray background?*/
+    border: 1px solid #e0e3ea;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+
+}
+
+.review-box strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3d49df;
+    font-size: 1.1rem;
+}
+
+/* Image inside review box */
+.review-box img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    /* height: auto maintains aspect ratio */
+    border-radius: 0.375rem;
+    /*subtle 6px border radius on photos*/
+    margin-top: 0.5rem;
+    display: block;
+    /* display block = better for images */
+
+}
+
+/* Center the map image in the Location review-box */
+.review-box:first-of-type img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === Photo Grid (Uploaded Images) === */
+.photo-placeholder-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    gap: 1rem;
+    margin-top: 0.5rem;
+    justify-items: start;
+    /* align items to the left */
+}
+
+/* Image styling for uploaded placeholders */
+/*!important ensures these rules override any inherited styles.*/
+.photo-placeholder {
+    width: 120px !important;
+    /* did this to get the images to APPEAR the same size even if they are not*/
+    height: 90px !important;
+    object-fit: cover;
+    /* Ensures the image covers the box ; crop to fit */
+    border-radius: 0.5rem;
+    background: #e0e3ea;
+    border: 1px dashed #b0b7c3;
+    opacity: 0.8;
+    display: block;
+    /* Ensures images behave as blocks */
+}
+
+/* Desktop: Show nav links, hide hamburger */
+.main-nav {
+    display: flex;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* === Responsive: Mobile Styles (≤ 768px) === */
+/* Mobile: Stack review-boxes, buttons, and hide nav links */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .content {
+        padding: 1rem 0.5rem;
+    }
+
+    .review-box {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    /* Hide nav links on mobile */
+    .main-nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Show hamburger menu on mobile */
+    .menu-icon {
+        display: block;
+    }
+}
