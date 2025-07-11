@@ -1,5 +1,19 @@
+/* === Navigation Styles === */
+.main-nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
 /* === Layout Container === */
-.form-container {
+.container {
     max-width: 1000px;
     margin: 0 auto;
     background: #ffffff;
@@ -11,6 +25,12 @@
     padding: 1rem 2rem;
 }
 
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* only visible on mobile */
+}
+
 /* === Main Content === */
 .content {
     padding: 2rem;
@@ -18,8 +38,8 @@
 
 /* === Review Boxes === */
 .review-box {
-    background: #F8F9FB;
-    /*or subtle gray background?*/
+    background: #f0f2f5;
+    /*subtle gray background*/
     border: 1px solid #e0e3ea;
     border-radius: 0.5rem;
     padding: 1.5rem;
@@ -83,6 +103,7 @@
     display: block;
     /* Ensures images behave as blocks */
 }
+
 
 /* Desktop: Show nav links, hide hamburger */
 .main-nav {

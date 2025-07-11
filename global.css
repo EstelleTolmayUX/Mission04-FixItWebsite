@@ -7,28 +7,43 @@
 
  /* === Header Section === */
  .header {
-     background-color: #3952BC;
-     /* OR closer to primary blue ??? */
-     color: #ffffff;
-     padding: 1rem 2rem;
+     margin: 0 auto 2rem auto;
+     /* Remove top margin, keep bottom margin for spacing below */
+     background-color: white;
+     color: #1e1b4b;
+     padding: 1rem 5rem 1rem 5rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
  }
 
  /* === Global Base Styles === */
+
+ html,
  body {
+     height: 100%;
+ }
+
+ body {
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
      font-family: 'Montserrat', sans-serif;
      font-weight: 400;
      background-color: #f5f7fa;
-     /* light neutral background */
-     color: #000000;
-     /* primary text color */
-     padding: 2rem;
+     color: #030712;
+     padding: 1rem 0 0 0;
+     /* Reduce top padding, remove side paddings */
+ }
+
+ main {
+     flex: 1 0 auto;
  }
 
  h1 {
      font-weight: 700;
+     margin-top: 0.5rem;
+     /* Reduce space above h1 */
  }
 
  h2 {
@@ -49,22 +64,65 @@
      font-weight: 400;
  }
 
+ /* === Navigation Styles === */
+ .main-nav {
+     gap: 0.75rem;
+ }
+
+ .main-nav a {
+     margin-left: 0;
+     text-decoration: none;
+     color: #1e1b4b;
+     font-weight: 600;
+     font-size: 1rem;
+     transition: color 0.3s ease;
+     padding: 0 0.5rem;
+ }
+
+ .main-nav a:hover {
+     text-decoration: underline;
+ }
+
+ .main-nav .nav-separator {
+     position: relative;
+     padding-left: 1.5rem;
+     /* space for the separator */
+ }
+
+ .main-nav .nav-separator::before {
+     content: "";
+     position: absolute;
+     left: 0.5rem;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 1px;
+     height: 1.5em;
+     background: #b0b7c3;
+     opacity: 0.7;
+ }
+
+ .menu-icon {
+     font-size: 1.5rem;
+     cursor: pointer;
+     /* only visible on mobile */
+ }
 
  /* === Buttons === */
  .buttons {
      display: flex;
-     justify-content: flex-start;
-     /* aligns left */
+     justify-content: flex-end;
+     /* aligns right */
      gap: .25rem;
      margin: 1rem 0;
      padding: 0;
      width: 100%;
+     font-weight: 600;
  }
 
  button {
      padding: 0.75rem 1.5rem;
      border: none;
-     border-radius: 1.875rem;
+     border-radius: 0.5rem;
      /* 🔹 was 1.5rem : Consider lowering to 0.5rem for modern feel?*/
      font-size: 1rem;
      cursor: pointer;
@@ -72,54 +130,30 @@
 
  /* === Button Styles === */
  .btn-primary {
-     background-color: #5500E5;
-     color: #fff;
+     background-color: #4f46e5;
+     font-weight: 600;
+     color: #ffffff;
      transition: background 0.2s, box-shadow 0.2s;
      box-shadow: 0 2px 8px rgba(48, 79, 254, 0.08);
  }
 
  .btn-primary:hover {
-     background-color: #2A0073;
+     background-color: #6366f1;
      box-shadow: 0 4px 16px rgba(48, 79, 254, 0.12);
  }
 
  .btn-secondary {
-     background-color: #CCCCFF;
-     color: #5500E5;
-     border: 1px solid #5500E5;
- }
-
- .btn-secondary:hover {
-     background-color: #c5cae9;
-     color: #2A0073;
- }
-
- .btn-tertiary {
      background: none;
-     color: #304ffe;
-     text-decoration: underline;
-     border: none;
-     padding: 0.5rem;
-     font-size: 0.95rem;
- }
-
- .btn-tertiary:hover {
-     color: #3952BC;
-     text-decoration: underline;
- }
-
- .login-link a {
-     font-size: 0.85rem;
-     font-weight: 400;
-     text-align: left;
-     padding-bottom: 2rem;
-     padding-top: 0;
+     color: #030712;
+     font-weight: 600;
  }
 
  /* === Footer === */
  .site-footer {
-     background-color: #3952BC;
-     color: #ffffff;
+     margin-top: 2rem;
+     /* Add space above footer */
+     background-color: #03071298;
+     color: #fff;
      text-align: center;
      padding: 2rem 1rem;
  }
@@ -134,7 +168,7 @@
  }
 
  .footer-links a {
-     color: #ffffff;
+     color: #fff;
      text-decoration: none;
      font-weight: 500;
  }
@@ -152,7 +186,7 @@
  }
 
  .footer-social a {
-     color: #ffffff;
+     color: #fff;
      font-size: 1.25rem;
  }
 
@@ -164,4 +198,42 @@
      font-size: 0.9rem;
      opacity: 0.85;
      margin-top: 1rem;
+ }
+
+ /* === Responsive: Mobile Styles (≤ 768px) === */
+ /* Mobile: Stack review-boxes, buttons, and hide nav links */
+ @media (max-width: 768px) {
+     .container {
+         padding: 0.5rem;
+     }
+
+     .content {
+         padding: 1rem 0.5rem;
+     }
+
+     .review-box {
+         padding: 1rem;
+         margin-bottom: 1rem;
+     }
+
+     .buttons {
+         flex-direction: column;
+         gap: 0.75rem;
+         align-items: stretch;
+     }
+
+     button {
+         width: 50%;
+     }
+
+     /* Hide nav links on mobile */
+     .main-nav {
+         display: none;
+         flex-direction: column;
+     }
+
+     /* Show hamburger menu on mobile */
+     .menu-icon {
+         display: block;
+     }
  }

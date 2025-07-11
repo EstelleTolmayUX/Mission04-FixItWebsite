@@ -16,101 +16,88 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- Header -->
+    <header>
       <div class="header">
-        <h1>fix!t</h1>
-
+        <h1 class="logo">Fix!t</h1>
         <!-- Navigation -->
         <nav class="main-nav">
           <a href="#">Home</a>
-          <a href="#">Reports</a>
           <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#">View Reports</a>
+          <a href="#" class="nav-separator">Login</a>
+          <a href="#">Report Issue</a>
         </nav>
-
         <!-- hamburger menu (mobile only) -->
         <!-- aria labelling for accessibility on hamburger menu icon -->
         <div class="menu-icon" aria-label="Open menu" tabindex="0">&#9776;</div>
       </div>
+    </header>
 
-      <!-- Content -->
-      <!-- Content Section: Shows report preview before user submits -->
-      <div class="content">
-        <h2>Review Your Report</h2>
+    <main>
+      <div class="form-container">
+        <!-- Content Section: Shows report preview before user submits -->
+        <div class="content">
+          <h2>Review Your Report</h2>
 
-        <div class="review-box">
-          <strong>Location</strong>
-          Mount Eden Road, Mount Eden, Auckland
-          <!-- Static placeholder map image (replace with embedded map or API later) -->
-          <img src="../Images/mapplaceholder.png" alt="Map placeholder" />
-        </div>
+          <div class="review-box">
+            <strong>Location</strong>
+            Mount Eden Road, Mount Eden, Auckland
+            <!-- Static placeholder map image (replace with embedded map or API later) -->
+            <img src="../Images/mapplaceholder.png" alt="Map placeholder" />
+          </div>
 
-        <div class="review-box">
-          <strong>Category</strong>
-          Graffiti & Vandalism
-        </div>
+          <div class="review-box">
+            <strong>Category / Issue</strong>
+            Graffiti & Vandalism
+          </div>
 
-        <div class="review-box">
-          <strong>Description</strong>
-          Graffiti on brick wall of library in Mount Eden.
-        </div>
+          <div class="review-box">
+            <strong>Description</strong>
+            Graffiti on brick wall of library in Mount Eden.
+          </div>
 
-        <div class="review-box">
-          <strong>Photos</strong>
-          <!-- Placeholder for uploaded images -->
-          <!-- Placeholder photo gallery (uploads would appear here dynamically) -->
-          <!-- TODO: Could enhance with upload preview and remove button in future -->
-          <div class="photo-placeholder-list">
-            <img src="../Images/graffiti-unsplash.jpg" alt="Photo placeholder 1" class="photo-placeholder" />
-            <img src="../Images/grafitti2-unsplash.jpg" alt="Photo placeholder 2" class="photo-placeholder" />
-            <img src="https://via.placeholder.com/120x90?text=Photo+2" alt="Photo placeholder 3" class="photo-placeholder" />
-            <img src="https://via.placeholder.com/120x90?text=Photo+2" alt="Photo placeholder 4" class="photo-placeholder" />
-            <!-- Add more placeholders as needed -->
+          <div class="review-box">
+            <strong>Photos</strong>
+            <!-- Placeholder for uploaded images -->
+            <!-- Placeholder photo gallery (uploads would appear here dynamically) -->
+            <!-- TODO: Could enhance with upload preview and remove button in future -->
+            <div class="photo-placeholder-list">
+              <img src="../Images/graffiti-unsplash.jpg" alt="Photo placeholder 1" class="photo-placeholder" />
+              <img src="../Images/grafitti2-unsplash.jpg" alt="Photo placeholder 2" class="photo-placeholder" />
+              <img src="https://via.placeholder.com/120x90?text=Photo+2" alt="Photo placeholder 3" class="photo-placeholder" />
+              <img src="https://via.placeholder.com/120x90?text=Photo+2" alt="Photo placeholder 4" class="photo-placeholder" />
+              <!-- Add more placeholders as needed -->
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="buttons">
+            <button class="btn-secondary">Back</button>
+            <!-- Buttons: Navigation & Form submission -->
+            <button class="btn-primary">Submit</button>
           </div>
         </div>
-
-        <!-- Buttons -->
-        <div class="buttons">
-          <button class="btn-secondary">Back</button>
-          <!-- Buttons: Navigation & Form submission -->
-          <button class="btn-primary">Submit</button>
-        </div>
-
-        <div>
-          <!-- Secondary option for users to submit and create account -->
-          <button class="btn-secondary">Submit & Register</button>
-        </div>
-
-        <div class="login-link">
-          <a href="#" class="btn-tertiary">Already have an account?</a>
-        </div>
+        <!-- end of Content -->
       </div>
-      <!-- end of Content -->
+    </main>
 
-      <br />
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#">Tech Support</a>
+        <a href="#">Contact Council</a>
+        <a href="#">Get Involved</a>
+        <a href="#">Privacy Policy</a>
+      </div>
 
-      <!-- Footer -->
-      <footer class="site-footer">
-        <!-- Footer navigation links -->
-        <div class="footer-links">
-          <a href="#">Tech Support</a>
-          <a href="#">Contact Council</a>
-          <a href="#">Get Involved</a>
-          <a href="#">Privacy Policy</a>
-        </div>
-
-        <!-- Social media icons -->
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-
-        <!-- Copyright text -->
-        <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
-      </footer>
-    </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <hr />
+      <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
+    </footer>
 
     <!-- A little bit of JS: This lets the hamburger toggle the nav menu visibility. -->
     <!-- TODO: Replace with full responsive nav if using a framework later -->
