@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styleStep2.css" />
+    <title>FixIt</title>
+  </head>
+
+  <body>
+    <!-- Header & Page Navigation -->
+    <header>
+      <div class="header-container">
+        <h1 class="logo">Fix!t</h1>
+        <!-- Navigation -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Councils</a></li>
+            <li><a href="#">Reports</a></li>
+
+            <li><a href="#" class="btn btn-outline">Login</a></li>
+            <li><a href="#" class="btn btn-primary">Report Issue!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Report Issue Form  -->
+    <main>
+      <div class="form-container">
+        <form action="#" method="post" name="report-issue-form">
+          <!-- Step 1: Enter Location -->
+
+          <!-- Step 2: Select Category & Write Description -->
+          <div class="step step-2 active">
+            <div class="category-group">
+              <h2>What is the issue?</h2>
+              <button type="button" class="category-item"><i class="fa-solid fa-cart-shopping"></i>Abandoned Trolleys</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-kiwi-bird"></i>Animals & Pests</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-shoe-prints"></i>Footpaths</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-paint-roller"></i>Graffiti & Vandalism</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-tree"></i>Parks & Public Facilities</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-bus"></i>Public Transport</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-road"></i>Roads & Signage</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-trash"></i>Rubbish & Recycling</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-lightbulb"></i>Street Lights</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-droplet"></i>Water & Drainage</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-bolt"></i>Utilities</button>
+              <button type="button" class="category-item"><i class="fa-solid fa-car"></i>Vehicles</button>
+            </div>
+
+            <div class="description-group">
+              <label for="description-box">
+                <h2>Tell us about the issue.</h2>
+              </label>
+              <div class="info-box">
+                <p>
+                  Give us more information of the nature of the issue. Where is it? When did you notice it? How long has it remained
+                  unresolved? Please keep it respectful and be careful no to share any personal information.
+                </p>
+              </div>
+              <textarea id="description-box" rows="10"></textarea>
+            </div>
+
+            <!-- Step 3: Upload Photo (optional) -->
+
+            <!-- Step 4: Review & Submit  -->
+
+            <!-- Success Message -->
+
+            <!-- Form Navigation -->
+            <div class="form-buttons-container">
+              <button type="button" class="back-btn">Back</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <!-- Footer navigation links -->
+      <div class="footer-links">
+        <a href="#">Tech Support</a>
+        <a href="#">Contact Council</a>
+        <a href="#">Get Involved</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <!-- Social media icons -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+
+      <hr />
+      <!-- Copyright text -->
+      <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
+    </footer>
+    <script></script>
+  </body>
+</html>
