@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="step3.css" />
+    <title>FixIt</title>
+  </head>
+  <body>
+    <!-- Header & Page Navigation -->
+    <header>
+      <div class="header-container">
+        <h1 class="logo">Fix!t</h1>
+        <!-- Navigation -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Fixers</a></li>
+            <li><a href="#">Reports</a></li>
+
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Report Issue!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Report Issue Form  -->
+    <main>
+      <div class="form-container">
+        <form action="#" method="post" name="report-issue-form">
+          <!-- Step 1: Enter Location -->
+
+          <!-- Step 2: Select Category & Write Description -->
+
+          <!-- Step 3: Upload Photo (optional) -->
+          <div class="step step-3 active">
+            <h2>Add Photo (optional)</h2>
+            <div class="info-box">
+              <p>
+                To help us better locate your issue, provide up to 4 photos. It could be a close up shot to show more detail or a wide shot
+                to show landmarks such as buildings or street signs.
+                <br />
+                Be careful not to show any personal information.
+              </p>
+            </div>
+
+            <div class="photo-options">
+              <div class="photo-button">
+                <label for="camera-input">
+                  <i class="fa-solid fa-camera"></i>
+                  Take a Photo
+                </label>
+                <input type="file" id="camera-input" accept="image/*" capture="environment" />
+              </div>
+
+              <div class="photo-button">
+                <label for="camera-roll-input">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  Upload a Photo
+                </label>
+                <input type="file" id="camera-roll-input" accept="image/*" />
+              </div>
+            </div>
+            <!-- Step 4: Review & Submit  -->
+
+            <!-- Success Message -->
+
+            <!-- Form Navigation -->
+            <div class="form-buttons-container">
+              <button type="button" class="back-btn">Back</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <!-- Footer navigation links -->
+      <div class="footer-links">
+        <a href="#">Tech Support</a>
+        <a href="#">Contact Council</a>
+        <a href="#">Get Involved</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <!-- Social media icons -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+
+      <hr />
+      <!-- Copyright text -->
+      <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
+    </footer>
+
+    <script></script>
+  </body>
+</html>
