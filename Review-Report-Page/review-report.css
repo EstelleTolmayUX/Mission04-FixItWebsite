@@ -1,6 +1,6 @@
 /* === Layout Container === */
 .form-container {
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
     background: #ffffff;
@@ -32,7 +32,7 @@
     display: block;
     margin-bottom: 0.5rem;
     color: #3952BC;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 /* Image inside review box */
