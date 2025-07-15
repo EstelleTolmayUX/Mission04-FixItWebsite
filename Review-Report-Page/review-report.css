@@ -1,12 +1,13 @@
 /* === Layout Container === */
 .form-container {
     max-width: 900px;
+    /*all form containers at 900px*/
     width: 100%;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0px 20px rgba(44, 62, 80, 0.08);
+    box-shadow: 0px 0px 20px #00000020;
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
@@ -25,7 +26,6 @@
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
-
 }
 
 .review-box strong {
@@ -46,7 +46,6 @@
     margin-top: 0.5rem;
     display: block;
     /* display block = better for images */
-
 }
 
 /* Center the map image in the Location review-box */
@@ -84,7 +83,7 @@
     /* Ensures images behave as blocks */
 }
 
-/* Desktop: Show nav links, hide hamburger */
+/* =====Desktop: Show nav links, hide hamburger==== */
 .main-nav {
     display: flex;
 }
