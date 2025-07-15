@@ -5,21 +5,28 @@
      padding: 0;
  }
 
- /* === Header Section === */
- .header {
-     margin: 0 auto 2rem auto;
-     /* Remove top margin, keep bottom margin for spacing below */
-     background-color: white;
-     color: #1e1b4b;
-     padding: 1rem 5rem 1rem 5rem;
+ /* === Header Section and content layout=== */
+ .header-content {
      display: flex;
      justify-content: space-between;
+     margin: 0 auto 2rem auto;
+     /* Remove top margin, keep bottom margin for spacing below */
      align-items: center;
+     /*places the nav links centered inside header container*/
+     line-height: 1;
+     /* keeps height tight if screen gets smaller*/
+     background-color: white;
+     padding: 1.25rem 5rem;
+     /* Slightly increase vertical padding */
+     box-shadow: 0px 0px 20px #00000020;
+     /* Add subtle shadow for depth */
+
  }
 
  .logo {
      color: #312e81;
      /*Tailwind’s richest indigo.*/
+     font-size: 2.5rem;
  }
 
  /* === Global Base Styles === */
@@ -37,8 +44,7 @@
      font-weight: 400;
      background-color: #f5f7fa;
      color: #030712;
-     padding: 1rem 0 0 0;
-     /* Reduce top padding, remove side paddings */
+     /* Tailwind Color: gray-800*/
  }
 
  main {
@@ -81,9 +87,9 @@
      /* Slate-800 from Tailwind — a modern dark gray */
  }
 
- /* === Navigation Styles === */
+ /* ===Header: Navigation Styles === */
  .main-nav {
-     gap: 0.75rem;
+     gap: 1.25rem;
      list-style: none;
      /* removes bullets */
      display: flex;
@@ -101,8 +107,8 @@
  .main-nav a {
      margin-left: 0;
      text-decoration: none;
-     color: #1e293b;
-     /* tailwind text-slate-800*/
+     color: #1e1b4b;
+     /* tailwind indigo-950*/
      font-weight: 600;
      font-size: 1rem;
      transition: color 0.3s ease;
