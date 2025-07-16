@@ -60,7 +60,13 @@
      height: 2px;
      background: #4f46e5;
      transform: scaleX(0);
+     transform-origin: left;
+     /* Animate from left to right */
      transition: transform 0.3s ease;
+ }
+
+ .main-nav a:hover {
+     color: #4f46e5;
  }
 
  .main-nav a:hover::after {
