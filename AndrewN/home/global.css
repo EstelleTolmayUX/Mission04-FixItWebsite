@@ -1,0 +1,278 @@
+/* === Global Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header Section === */
+.header {
+  margin: 0 auto 2rem auto;
+  /* Remove top margin, keep bottom margin for spacing below */
+  background-color: white;
+  color: #1e1b4b;
+  padding: 1rem 5rem 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #312e81;
+  /*Tailwind’s richest indigo.*/
+}
+
+/* === Global Base Styles === */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: #f5f7fa;
+  color: #030712;
+
+  /* Reduce top padding, remove side paddings */
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  /* Reduce space above h1 */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  /* Slate-800 from Tailwind — a modern dark gray */
+}
+
+/* === Navigation Styles === */
+.main-nav {
+  gap: 0.75rem;
+  list-style: none;
+  /* removes bullets */
+  display: flex;
+  /* optional: makes the nav horizontal */
+  gap: 0.75rem;
+  /* spacing between items */
+  padding: 0;
+  /* removes default padding */
+  margin: 0;
+  /* removes default margin */
+  align-items: center;
+  /* centers vertically, if needed */
+}
+
+.main-nav a {
+  margin-left: 0;
+  text-decoration: none;
+  color: #1e293b;
+  /* tailwind text-slate-800*/
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 0 0.5rem;
+  list-style: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+  color: #4f46e5;
+}
+
+.main-nav .nav-separator {
+  position: relative;
+  padding-left: 1.5rem;
+  /* space for the separator */
+}
+
+.main-nav .nav-separator::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.5em;
+  background: #b0b7c3;
+  opacity: 0.7;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  /* only visible on mobile */
+}
+
+/* === Buttons === */
+.form-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  /* aligns right */
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+  margin: 1rem 0;
+  padding: 0;
+  width: 100%;
+  font-weight: 600;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  /* 🔹 was 1.5rem : Consider lowering to 0.5rem for modern feel?*/
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* === Button Styles === */
+.btn-primary {
+  background-color: #4f46e5;
+  /* Indigo 600 */
+  font-weight: 600;
+  color: #ffffff;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(48, 79, 254, 0.08);
+}
+
+.btn-primary:hover {
+  background-color: #6366f1;
+  /* Indigo 500 */
+}
+
+.btn-secondary {
+  background: none;
+  color: #4b5563;
+  /* Tailwind Gray 600 */
+  font-weight: 600;
+}
+
+/* === Footer === */
+.site-footer {
+  margin-top: 2rem;
+  /* Add space above footer */
+  background-color: #312e81;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #e0e7ff;
+  /* Soft light text for links/icons */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin: 2rem 0 1rem 0;
+  /* center icons */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  color: #e0e7ff;
+  /* Soft light text for links/icons */
+  font-size: 1.25rem;
+}
+
+.footer-social a:hover {
+  color: #c7d2fe;
+  /* Indigo-200 on hover */
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 1rem;
+}
+
+/* === Responsive: Mobile Styles (≤ 768px) === */
+/* Mobile: Stack review-boxes, buttons, and hide nav links */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .content {
+    padding: 1rem 0.5rem;
+  }
+
+  .review-box {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  /* Hide nav links on mobile */
+  .main-nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  /* Show hamburger menu on mobile */
+  .menu-icon {
+    display: block;
+  }
+}

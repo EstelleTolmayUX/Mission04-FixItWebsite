@@ -68,64 +68,16 @@
 }
 
 /* Image styling for uploaded placeholders */
-/*!important ensures these rules override any inherited styles.*/
 .photo-placeholder {
-    width: 120px !important;
-    /* did this to get the images to APPEAR the same size even if they are not*/
-    height: 90px !important;
+    width: 120px;
+    height: 90px;
     object-fit: cover;
-    /* Ensures the image covers the box ; crop to fit */
     border-radius: 0.5rem;
     background: #e0e3ea;
     border: 1px dashed #b0b7c3;
     opacity: 0.8;
     display: block;
     /* Ensures images behave as blocks */
-}
-
-/* =====Desktop: Show nav links, hide hamburger==== */
-.main-nav {
-    display: flex;
-}
-
-.menu-icon {
-    display: none;
-}
-
-/* === Responsive: Mobile Styles (≤ 768px) === */
-/* Mobile: Stack review-boxes, buttons, and hide nav links */
-@media (max-width: 768px) {
-    .container {
-        padding: 0.5rem;
-    }
-
-    .content {
-        padding: 1rem 0.5rem;
-    }
-
-    .review-box {
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-        align-items: stretch;
-    }
-
-    button {
-        width: 50%;
-    }
-
-    /* Hide nav links on mobile */
-    .main-nav {
-        display: none;
-        flex-direction: column;
-    }
-
-    /* Show hamburger menu on mobile */
-    .menu-icon {
-        display: block;
-    }
+    /* Prevent stretching in grid */
+    aspect-ratio: 4 / 3;
 }

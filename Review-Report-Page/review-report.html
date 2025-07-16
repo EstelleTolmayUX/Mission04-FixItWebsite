@@ -16,29 +16,28 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="header-content">
-        <h1 class="logo">Fix!t</h1>
-        <!-- Navigation -->
-        <nav>
-          <ul class="main-nav">
-            <li><a href="#">About</a></li>
-            <li><a href="#">View Reports</a></li>
-            <li><a href="#" class="nav-separator">Login</a></li>
-            <li><a href="#">Report It</a></li>
-          </ul>
-        </nav>
-        <!-- hamburger menu (mobile only) -->
-        <!-- aria labelling for accessibility on hamburger menu icon -->
-        <div class="menu-icon" aria-label="Open menu" tabindex="0">&#9776;</div>
-      </div>
+    <header>
+      <h1 class="logo">Fix!t</h1>
+      <!-- Navigation -->
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">View Reports</a></li>
+          <div>|</div>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Report It</a></li>
+        </ul>
+      </nav>
+      <!-- hamburger menu (mobile only) -->
+      <!-- aria labelling for accessibility on hamburger menu icon -->
+      <div class="menu-icon" aria-label="Open menu" tabindex="0">&#9776;</div>
     </header>
 
     <main>
       <div class="form-container">
         <!-- Content Section: Shows report preview before user submits -->
         <div class="content">
-          <h2>Review Your Report</h2>
+          <h2>Almost There - Let's Review Your Report...</h2>
 
           <div class="review-box">
             <strong>Location</strong>
@@ -58,7 +57,7 @@
           </div>
 
           <div class="review-box">
-            <strong>Photos</strong>
+            <strong>Your Photos</strong>
             <!-- Placeholder for uploaded images -->
             <!-- Placeholder photo gallery (uploads would appear here dynamically) -->
             <!-- TODO: Could enhance with upload preview and remove button in future -->
@@ -106,9 +105,9 @@
       const menuIcon = document.querySelector(".menu-icon");
       const mainNav = document.querySelector(".main-nav");
 
-      menuIcon.addEventListener("click", () => {
-        mainNav.style.display = mainNav.style.display === "flex" ? "none" : "flex";
-      });
+      // menuIcon.addEventListener("click", () => {
+      //   mainNav.style.display = mainNav.style.display === "flex" ? "none" : "flex";
+      // });
     </script>
   </body>
 </html>
