@@ -100,15 +100,11 @@
  }
 
  h1 {
-     font-weight: 700;
-     margin-top: 0.5rem;
-     /* Reduce space above h1 */
+     font-weight: 800;
  }
 
  h2 {
-     text-align: center;
-     margin-bottom: 2rem;
-     font-size: 1.5rem;
+     font-weight: 700;
  }
 
  h3 {
@@ -176,59 +172,96 @@
      font-weight: 600;
  }
 
- /* === Footer === */
- .site-footer {
+ /* -- Footer -- */
+ footer {
+     background-color: #312e81;
      margin-top: 2rem;
-     /* Add space above footer */
-     background-color: #312E81;
-     color: #fff;
-     text-align: center;
+     text-align: left;
      padding: 2rem 1rem;
  }
 
- .footer-links {
+ .footer-content {
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
-     font-size: 1rem;
-     gap: 2rem;
-     margin-bottom: 1rem;
+     gap: 10rem;
+     max-width: 1000px;
+     margin: 0 auto;
  }
 
- .footer-links a {
-     color: #E0E7FF;
-     /* Soft light text for links/icons */
+ .footer-section {
+     color: #e0e7ff;
+     text-align: left;
+ }
+
+ .footer-section ul {
+     list-style: none;
+     padding: 0.5rem;
+ }
+
+ .footer-section ul li {
+     margin-bottom: 0.625rem;
+ }
+
+ .footer-section ul li a {
+     position: relative;
+     color: white;
      text-decoration: none;
-     font-weight: 500;
+     padding-bottom: 5px;
  }
 
- .footer-links a:hover {
-     text-decoration: underline;
+ /* -- Pseudo-Element for Border Animation -- */
+ .footer-content li a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 2px;
+     width: 100%;
+     background-color: white;
+     transform: scaleX(0);
+     transform-origin: left;
+     transition: transform 0.3s ease-in-out;
  }
 
- .footer-social {
+ .footer-section li a:hover::after {
+     transform: scaleX(1);
+ }
+
+ .footer-socials {
      margin: 2rem 0 1rem 0;
-     /* center icons */
      display: flex;
      justify-content: center;
      gap: 1.5rem;
  }
 
- .footer-social a {
-     color: #E0E7FF;
-     /* Soft light text for links/icons */
-     font-size: 1.25rem;
+ .footer-socials a {
+     color: #e0e7ff;
+     font-size: 2rem;
  }
 
- .footer-social a:hover {
-     color: #C7D2FE;
-     /* Indigo-200 on hover */
+ .footer-socials a:hover {
+     color: #c7d2fe;
+ }
+
+ hr {
+     border-top: 0.25px solid #e0e7ff;
+ }
+
+ .footer-divider {
+     height: 1px;
+     width: 100%;
+     background-color: #e0e7ff;
+     opacity: 0.25;
+     margin: 2rem 0 1rem;
  }
 
  .footer-copy {
      font-size: 0.9rem;
      opacity: 0.85;
      margin-top: 1rem;
+     color: #e0e7ff;
+     text-align: center;
  }
 
 
@@ -281,5 +314,22 @@
      header {
          justify-content: space-around;
          padding: 0;
+     }
+
+     @media (max-width: 600px) {
+         .footer-content {
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+         }
+
+         .footer-socials {
+             flex-wrap: wrap;
+             gap: 1rem;
+         }
+
+         .footer-section {
+             margin-bottom: 1.5rem;
+         }
      }
  }
