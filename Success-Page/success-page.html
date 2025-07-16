@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FixIt - Success</title>
+    <title>FixIt - Success Page</title>
 
     <!-- Global Styles -->
     <link rel="stylesheet" href="../global.css" />
@@ -14,27 +14,31 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
   </head>
 
   <body>
-<header>
-        <h1 class="logo">Fix!t</h1>
+    <header>
+      <h1 class="logo">Fix!t</h1>
       <!-- Navigation -->
-        <nav>
-          <ul class="main-nav">
-            <li><a href="#">About</a></li>
-            <li><a href="#">View Reports</a></li>
-            <div>|</div>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Report It</a></li>
-          </ul>
-        </nav>
-        <!-- hamburger menu (mobile only) -->
-        <!-- aria labelling for accessibility on hamburger menu icon -->
-        <div class="menu-icon" aria-label="Open menu" tabindex="0">&#9776;</div>
-      </div>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">View Reports</a></li>
+          <div>|</div>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Report It</a></li>
+        </ul>
+      </nav>
+      <!-- hamburger menu (mobile only) -->
+      <!-- aria labelling for accessibility on hamburger menu icon -->
+      <div class="menu-icon" aria-label="Open menu" tabindex="0">&#9776;</div>
     </header>
-    
+
     <main>
       <div class="form-container">
         <div class="content">
@@ -45,37 +49,56 @@
           <div class="success-messaging">
             <p>Thank you for submitting your report.</p>
             <strong>Reminders:</strong>
-              <p>Reports will be reviewed starting the next business day. For immediate attention, please phone your council directly.</p>
+            <p>Reports will be reviewed starting the next business day. For immediate attention, please phone your council directly.</p>
             <strong class="important-warning">Always remember:</strong>
-              <p>If any issue is an emergency -- please contact Emergency Services.</p>
+            <p>If any issue is an emergency -- please contact Emergency Services.</p>
+          </div>
         </div>
-      </div>
 
         <!-- Buttons -->
         <div class="form-buttons-container">
-            <button class="btn-primary">Return Home</button>
+          <button class="btn-primary">Return Home</button>
         </div>
       </div>
-      <!-- end of Content inside the form-container--> 
-      </main>
+      <!-- end of Content inside the form-container-->
+    </main>
 
-      <!-- Footer -->
-      <footer class="site-footer">
-        <div class="footer-links">
-          <a href="#">Get Help</a>
-          <a href="#">Contact Council</a>
-          <a href="#">Get Involved</a>
-          <a href="#">Privacy Policy</a>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Local Government</a></li>
+          </ul>
         </div>
 
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <div class="footer-section">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Work with Us</a></li>
+          </ul>
         </div>
-   <hr />
-        <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
-      </footer>
-    </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copy">&copy; 2025 FixIt. All rights reserved.</div>
+    </footer>
   </body>
 </html>
