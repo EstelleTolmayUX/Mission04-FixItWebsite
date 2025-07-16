@@ -18,14 +18,14 @@
 
   <body>
 <header>
-  <div class="header-content">
         <h1 class="logo">Fix!t</h1>
       <!-- Navigation -->
         <nav>
           <ul class="main-nav">
             <li><a href="#">About</a></li>
             <li><a href="#">View Reports</a></li>
-            <li><a href="#" class="nav-separator">Login</a></li>
+            <div>|</div>
+            <li><a href="#">Login</a></li>
             <li><a href="#">Report It</a></li>
           </ul>
         </nav>
@@ -38,26 +38,25 @@
     <main>
       <div class="form-container">
         <div class="content">
+          <div class="success-icon">
+            <i class="far fa-check-circle"></i>
+          </div>
           <h2>Success!</h2>
-
           <div class="success-messaging">
-            <p>Thank you for your report.</p>
-          
+            <p>Thank you for submitting your report.</p>
             <strong>Reminders:</strong>
               <p>Reports will be reviewed starting the next business day. For immediate attention, please phone your council directly.</p>
-          
-            <strong>Important!</strong>
-              <p>If the issue is an emergency, please contact Emergency Services.</p>
+            <strong class="important-warning">Always remember:</strong>
+              <p>If any issue is an emergency -- please contact Emergency Services.</p>
         </div>
       </div>
 
         <!-- Buttons -->
         <div class="form-buttons-container">
-          <button class="btn-secondary">Register</button>
             <button class="btn-primary">Return Home</button>
         </div>
       </div>
-      <!-- end of Content --> 
+      <!-- end of Content inside the form-container--> 
       </main>
 
       <!-- Footer -->

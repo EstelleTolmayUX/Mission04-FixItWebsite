@@ -6,35 +6,80 @@
  }
 
  /* === Header Section and content layout=== */
- .header-content {
+ header {
      display: flex;
      justify-content: space-around;
-     margin: 0 auto 2rem auto;
-     /* Remove top margin, keep bottom margin for spacing below */
      align-items: center;
      /*places the nav links centered inside header container*/
-     line-height: 1;
-     /* keeps height tight if screen gets smaller*/
+     height: 5rem;
+     padding: 1rem;
      background-color: white;
-     padding: 1.25rem 2rem;
      /* Slightly increase vertical padding */
      box-shadow: 0px 0px 20px #00000020;
      /* Add subtle shadow for depth */
  }
 
  .logo {
+     display: flex;
+     justify-content: center;
+     width: 432.61px;
+     margin-left: 10rem;
      color: #312e81;
-     /*Tailwind’s richest indigo.*/
      font-size: 2.5rem;
  }
 
- /* === Global Base Styles === */
-
- html,
- body {
-     height: 100%;
+ /* ===Header: Navigation Styles === */
+ .main-nav {
+     list-style: none;
+     display: flex;
+     gap: 2rem;
+     /* spacing between items */
+     margin: 0;
+     /* removes default margin */
+     margin-left: 10rem;
+     align-items: center;
+     /* centers vertically*/
  }
 
+ .main-nav a {
+     position: relative;
+     color: #1e1b4b;
+     font-weight: 600;
+     font-size: 1rem;
+     text-decoration: none;
+     transition: color 0.3s ease;
+     padding: 0 0.5rem;
+ }
+
+ .main-nav a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -2px;
+     width: 100%;
+     height: 2px;
+     background: #4f46e5;
+     transform: scaleX(0);
+     transform-origin: left;
+     /* Animate from left to right */
+     transition: transform 0.3s ease;
+ }
+
+ .main-nav a:hover {
+     color: #4f46e5;
+ }
+
+ .main-nav a:hover::after {
+     transform: scaleX(1);
+ }
+
+ .menu-icon {
+     font-size: 1.5rem;
+     cursor: pointer;
+     /* only visible on mobile */
+ }
+
+ /* === Global Base Styles === */
  body {
      min-height: 100vh;
      display: flex;
@@ -63,7 +108,7 @@
  h2 {
      text-align: center;
      margin-bottom: 2rem;
-     font-size: 2rem;
+     font-size: 1.5rem;
  }
 
  h3 {
@@ -84,63 +129,6 @@
      margin-bottom: 1rem;
      color: #1f2937;
      /* Slate-800 from Tailwind — a modern dark gray */
- }
-
- /* ===Header: Navigation Styles === */
- .main-nav {
-     list-style: none;
-     /* removes bullets */
-     display: flex;
-     /* optional: makes the nav horizontal */
-     gap: 1rem;
-     /* spacing between items */
-     padding: 0;
-     /* removes default padding */
-     margin: 0;
-     /* removes default margin */
-     align-items: center;
-     /* centers vertically, if needed */
- }
-
- .main-nav a {
-     margin-left: 0;
-     text-decoration: none;
-     color: #1e1b4b;
-     /* tailwind indigo-950*/
-     font-weight: 600;
-     font-size: 1rem;
-     transition: color 0.3s ease;
-     padding: 0 0.5rem;
-     list-style: none;
- }
-
- .main-nav a:hover {
-     text-decoration: underline;
-     color: #4f46e5;
- }
-
- .main-nav .nav-separator {
-     position: relative;
-     padding-left: 1.5rem;
-     /* space for the separator */
- }
-
- .main-nav .nav-separator::before {
-     content: "";
-     position: absolute;
-     left: 0.5rem;
-     top: 50%;
-     transform: translateY(-50%);
-     width: 1px;
-     height: 1.5em;
-     background: #b0b7c3;
-     opacity: 0.7;
- }
-
- .menu-icon {
-     font-size: 1.5rem;
-     cursor: pointer;
-     /* only visible on mobile */
  }
 
  /* === Buttons === */
@@ -188,64 +176,95 @@
      font-weight: 600;
  }
 
- /* === Footer === */
- .site-footer {
-     margin-top: 2rem;
-     /* Add space above footer */
-     background-color: #312E81;
-     color: #fff;
-     text-align: center;
-     padding: 2rem 1rem;
- }
+/* === Footer === */
+footer {
+  background-color: #312e81;
+  margin-top: 5rem;
+  text-align: left;
+  padding: 2rem 1rem;
+}
 
- .footer-links {
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer-section {
+  color: #e0e7ff;
+  text-align: left;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+.footer-section ul li {
+  margin: 0.5rem;
+}
+.footer-section ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 0.313rem;
+}
+/* -- Pseudo-Element for Border Animation -- */
+.footer-content li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-section li a:hover::after {
+  transform: scaleX(1);
+}
+.footer-socials {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer-socials a {
+  color: #e0e7ff;
+  font-size: 2rem;
+}
+.footer-socials a:hover {
+  color: #c7d2fe;
+}
+.footer-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #e0e7ff;
+  opacity: 0.25;
+  margin: 2rem 0 1rem 0;
+}
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 1rem;
+  color: #e0e7ff;
+  text-align: center;
+}
+
+ /* =====Desktop: Show nav links, hide hamburger==== */
+ .main-nav {
      display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     font-size: 1rem;
-     gap: 2rem;
-     margin-bottom: 1rem;
  }
 
- .footer-links a {
-     color: #E0E7FF;
-     /* Soft light text for links/icons */
-     text-decoration: none;
-     font-weight: 500;
- }
-
- .footer-links a:hover {
-     text-decoration: underline;
- }
-
- .footer-social {
-     margin: 2rem 0 1rem 0;
-     /* center icons */
-     display: flex;
-     justify-content: center;
-     gap: 1.5rem;
- }
-
- .footer-social a {
-     color: #E0E7FF;
-     /* Soft light text for links/icons */
-     font-size: 1.25rem;
- }
-
- .footer-social a:hover {
-     color: #C7D2FE;
-     /* Indigo-200 on hover */
- }
-
- .footer-copy {
-     font-size: 0.9rem;
-     opacity: 0.85;
-     margin-top: 1rem;
+ .menu-icon {
+     display: none;
  }
 
  /* === Responsive: Mobile Styles (≤ 768px) === */
  /* Mobile: Stack review-boxes, buttons, and hide nav links */
- @media (max-width: 768px) {
+ @media (max-width: 1760px) {
      .container {
          padding: 0.5rem;
      }
@@ -279,4 +298,24 @@
      .menu-icon {
          display: block;
      }
+      
+      header {
+          justify-content: space-around;
+          padding: 0;
+     }
+   
+     .footer-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+
+      .footer-socials {
+          flex-wrap: wrap;
+          gap: 1rem;
+      }
+
+      .footer-section {
+          margin-bottom: 1.5rem;
+      }
  }
