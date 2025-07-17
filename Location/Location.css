@@ -7,8 +7,8 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertical centering */
-  align-items: center; /* Horizontal centering */
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
