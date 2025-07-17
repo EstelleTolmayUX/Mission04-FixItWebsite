@@ -276,6 +276,22 @@ footer {
 .menu-icon {
   display: none;
 }
+/* =====Desktop: Show nav links, hide hamburger==== */
+.main-nav {
+  display: flex;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* === Responsive: Mobile Styles (≤ 768px) === */
+/* Mobile: Stack review-boxes, buttons, and hide nav links */
+/* @media (max-width: 1760px) {
+     .container {
+         padding: 0.5rem;
+     }
+>>>>>>>>> Temporary merge branch 2
 
 /* === Responsive: Mobile Styles (≤ 768px) === */
 /* Mobile: Stack review-boxes, buttons, and hide nav links */
