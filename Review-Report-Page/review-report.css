@@ -1,3 +1,20 @@
+h2 {
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 0.5rem;
+    /* Reduce space above h1 */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+
 /* === Layout Container === */
 .form-container {
     max-width: 900px;
@@ -81,3 +98,6 @@
     /* Prevent stretching in grid */
     aspect-ratio: 4 / 3;
 }
+
+/*margin-top: 0.5rem;
+/* Reduce space above h1 */

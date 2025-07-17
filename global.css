@@ -99,17 +99,17 @@ main {
   padding: 2rem;
 }
 
-h1 {
-  font-weight: 700;
-  margin-top: 0.5rem;
-  /* Reduce space above h1 */
-}
+ h1 {
+     font-weight: 700;
+     margin-top: 0.5rem;
+     /* Reduce space above h1 */
+ }
 
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-}
+ h2 {
+     text-align: center;
+     margin-bottom: 2rem;
+     font-size: 1.5rem;
+ }
 
 h3 {
   font-weight: 600;
@@ -176,82 +176,93 @@ button {
   font-weight: 600;
 }
 
-/* === Footer === */
-footer {
-  background-color: #312e81;
-  margin-top: 5rem;
-  text-align: left;
-  padding: 2rem 1rem;
-}
+ /* === Footer === */
+ footer {
+     background-color: #312e81;
+     margin-top: 5rem;
+     text-align: left;
+     padding: 2rem 1rem;
+ }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.footer-section {
-  color: #e0e7ff;
-  text-align: left;
-}
-.footer-section ul {
-  list-style: none;
-  padding: 0.5rem;
-}
-.footer-section ul li {
-  margin: 0.5rem;
-}
-.footer-section ul li a {
-  position: relative;
-  color: white;
-  text-decoration: none;
-  padding-bottom: 0.313rem;
-}
-/* -- Pseudo-Element for Border Animation -- */
-.footer-content li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: white;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
-}
-.footer-section li a:hover::after {
-  transform: scaleX(1);
-}
-.footer-socials {
-  margin: 2rem 0 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.footer-socials a {
-  color: #e0e7ff;
-  font-size: 2rem;
-}
-.footer-socials a:hover {
-  color: #c7d2fe;
-}
-.footer-divider {
-  height: 1px;
-  width: 100%;
-  background-color: #e0e7ff;
-  opacity: 0.25;
-  margin: 2rem 0 1rem 0;
-}
-.footer-copy {
-  font-size: 0.9rem;
-  opacity: 0.85;
-  margin-top: 1rem;
-  color: #e0e7ff;
-  text-align: center;
-}
+ .footer-content {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 10rem;
+     max-width: 1000px;
+     margin: 0 auto;
+ }
+
+ .footer-section {
+     color: #e0e7ff;
+     text-align: left;
+ }
+
+ .footer-section ul {
+     list-style: none;
+     padding: 0.5rem;
+ }
+
+ .footer-section ul li {
+     margin: 0.5rem;
+ }
+
+ .footer-section ul li a {
+     position: relative;
+     color: white;
+     text-decoration: none;
+     padding-bottom: 0.313rem;
+ }
+
+ /* -- Pseudo-Element for Border Animation -- */
+ .footer-content li a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 2px;
+     width: 100%;
+     background-color: white;
+     transform: scaleX(0);
+     transform-origin: left;
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .footer-section li a:hover::after {
+     transform: scaleX(1);
+ }
+
+ .footer-socials {
+     margin: 2rem 0 1rem 0;
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+ }
+
+ .footer-socials a {
+     color: #e0e7ff;
+     font-size: 2rem;
+ }
+
+ .footer-socials a:hover {
+     color: #c7d2fe;
+ }
+
+ .footer-divider {
+     height: 1px;
+     width: 100%;
+     background-color: #e0e7ff;
+     opacity: 0.25;
+     margin: 2rem 0 1rem 0;
+ }
+
+ .footer-copy {
+     font-size: 0.9rem;
+     opacity: 0.85;
+     margin-top: 1rem;
+     color: #e0e7ff;
+     text-align: center;
+ }
 
 /* =====Desktop: Show nav links, hide hamburger==== */
 .main-nav {
@@ -298,29 +309,24 @@ footer {
 /* .menu-icon {
          display: block;
      }
-      
-      header {
-          justify-content: space-around;
-          padding: 0;
-     }
-   
-     .footer-content {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-      }
 
-      .footer-socials {
-          flex-wrap: wrap;
-          gap: 1rem;
-      }
+     header {
+         justify-content: space-around;
+         padding: 0;
+     }
+
+     .footer-content {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+     }
+
+     .footer-socials {
+         flex-wrap: wrap;
+         gap: 1rem;
+     }
 
       .footer-section {
           margin-bottom: 1.5rem;
       }
- } */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+ }
