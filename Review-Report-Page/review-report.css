@@ -15,7 +15,7 @@ h2 {
 }
 
 
-/* === Layout Container === */
+/* === Layout Container USED FLEXBOX === */
 .form-container {
     max-width: 900px;
     /*all form containers at 900px*/
@@ -71,7 +71,7 @@ h2 {
     margin-right: auto;
 }
 
-/* === Photo Grid (Uploaded Images) === */
+/* === Photo GRID (Uploaded Images) === */
 .photo-placeholder-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,6 +98,3 @@ h2 {
     /* Prevent stretching in grid */
     aspect-ratio: 4 / 3;
 }
-
-/*margin-top: 0.5rem;
-/* Reduce space above h1 */
