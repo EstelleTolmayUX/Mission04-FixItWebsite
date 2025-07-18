@@ -40,11 +40,13 @@
 
     <main>
       <div class="form-container">
+        <!-- reusable layout containers -->
         <!-- Content Section: Shows report preview before user submits -->
         <div class="content">
           <h2>Almost There - Let's Review Your Report...</h2>
 
           <div class="review-box">
+            <!-- reusable layout containers -->
             <strong>Location</strong>
             Mount Eden Road, Mount Eden, Auckland
             <!-- Static placeholder map image (replace with embedded map or API later) -->
@@ -130,9 +132,13 @@
       const menuIcon = document.querySelector(".menu-icon");
       const mainNav = document.querySelector(".main-nav");
 
-      // menuIcon.addEventListener("click", () => {
-      //   mainNav.style.display = mainNav.style.display === "flex" ? "none" : "flex";
-      // });
+      // // menuIcon.addEventListener("click", () => {
+      // //   mainNav.style.display = mainNav.style.display === "flex" ? "none" : "flex";
+      // // });
+
+      // 📱Responsive Design
+      // Navbar / Mobile Toggle:
+      // The navigation is responsive. I’ve commented out the hamburger toggle script for now since we're not using JS yet. Same with keyframes as we are still to resolve bugs; taking that on for Mission X
     </script>
   </body>
 </html>
